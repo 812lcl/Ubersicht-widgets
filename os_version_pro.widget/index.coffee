@@ -21,7 +21,6 @@ if theme == 'mono' || theme == 'dark'
   labelColor	= 'WHITE'
   nameColor		= 'WHITE'
   uptimeColor	= 'WHITE'
-  lineColor		= 'WHITE'
   bkground		= 'rgba(#FFF, 0.1)'
   opacityLevel	= '1'
 
@@ -29,7 +28,6 @@ else if theme == 'paper'
   labelColor	= 'WHITE'
   nameColor		= 'BLACK'
   uptimeColor	= 'BLACK'
-  lineColor		= 'WHITE'
   bkground		= 'rgba(#FFF, 0.1)'
   opacityLevel	= '0.8'
 
@@ -37,13 +35,11 @@ else
   labelColor	= 'WHITE'
   nameColor		= '#D3D3D3'
   uptimeColor	= '#7dff7d'
-  lineColor		= '#00BFFF'	  # Blue
   bkground		= 'rgba(#000, 0.1)'
   opacityLevel	= '1'
 
- if theme == 'dark'
-  bkground		= 'rgba(#FFF, 0.1)'
-  lineColor		= 'rgba(#FFF, 0.1)'
+if theme == 'dark'
+  bkground		= 'rgba(#000, 0.5)'
 
 command: "system_profiler SPSoftwareDataType | awk '{ if((/System Version/) && (/OS X/)) { print $3$4, $5, $6 }
 													  else if (/System Version/) { print $3, $4, $5 } }'"

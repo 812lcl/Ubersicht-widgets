@@ -1,3 +1,14 @@
+theme = 'dark'
+if theme == 'dark'
+  bkground = 'rgba(#000, 0.5)'
+  nameColor		= 'BLACK'
+else if theme == 'light'
+  bkground = 'rgba(#FFF, 0.1)'
+  nameColor		= 'WHITE'
+else
+  bkground = 'rgba(#000, 0.5)'
+  nameColor		= 'BLACK'
+
 command: "ps axo \"rss,pid,ucomm\" | sort -nr | head -n3 | awk '{printf \"%8.0f MB,%s,%s\\n\", $1/1024, $3, $2}'"
 
 refreshFrequency: 5000
@@ -18,6 +29,8 @@ style: """
       left: 0
       top: -14px
       font-size: 10px
+      color: #{nameColor}
+      font-weight: 600
 
   td
     font-size: 12px
@@ -32,15 +45,15 @@ style: """
     position: relative
 
   .col1
-    background: rgba(#fff, 0.1)
+    background: #{bkground}
     border-radius 5px
 
   .col2
-    background: rgba(#fff, 0.1)
+    background: #{bkground}
     border-radius 5px
 
   .col3
-    background: rgba(#fff, 0.1)
+    background: #{bkground}
     border-radius 5px
 
   p

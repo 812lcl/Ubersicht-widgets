@@ -1,3 +1,11 @@
+theme = 'dark'
+if theme == 'dark'
+  bkground = 'rgba(#000, 0.5)'
+else if theme == 'light'
+  bkground = 'rgba(#FFF, 0.1)'
+else
+  bkground = 'rgba(#000, 0.5)'
+
 command: """
     network-throughput.widget/lib/network.sh
 """
@@ -17,7 +25,7 @@ style: """
     // Statistics text settings
     color #fff
     font-family Helvetica Neue
-    background rgba(#FFF, .1)
+    background #{bkground}
     padding 10px 10px 15px
     border-radius 5px
 

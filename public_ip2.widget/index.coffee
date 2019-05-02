@@ -1,3 +1,11 @@
+theme = 'dark'
+if theme == 'dark'
+  bkground = 'rgba(#000, 0.5)'
+else if theme == 'light'
+  bkground = 'rgba(#FFF, 0.1)'
+else
+  bkground = 'rgba(#000, 0.5)'
+
 command: "./public_ip2.widget/script.sh"
 
 refreshFrequency: '1m'
@@ -20,7 +28,7 @@ style: """
   div
     display: block
     text-shadow: 0 0 1px rgba(#000, 0.5)
-    background: rgba(#fff, 0.1)
+    background: #{bkground}
     font-size: 21px
     font-weight: 100
     border-radius 5px
