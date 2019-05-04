@@ -1,54 +1,54 @@
 #-----------------------------------------------------------------------#
-#																		#
-# OS Version Pro for Übersicht 											#
-# 																		#
-# Created July 2018 by Mike Pennella									#
-#																		#
-# Change the theme variable below to style the widget					#
-# THEME OPTIONS: mono, paper, color or dark	(default/blank is color)	#
-theme		= 'dark'													#
-#																		#
-# Show or hide the version build information in the widget				#
-showBuild	= 'false'													#
-#																		#
-# Position the widget on the screen										#
-pos_top		= '10px'													#
-pos_left	= '10px'													#
-#																		#
+#                                                                       #
+# OS Version Pro for Übersicht                                          #
+#                                                                       #
+# Created July 2018 by Mike Pennella                                    #
+#                                                                       #
+# Change the theme variable below to style the widget                   #
+# THEME OPTIONS: mono, paper, color or dark (default/blank is color)    #
+theme       = 'dark'                                                    #
+#                                                                       #
+# Show or hide the version build information in the widget              #
+showBuild   = 'false'                                                   #
+#                                                                       #
+# Position the widget on the screen                                     #
+pos_top     = '10px'                                                    #
+pos_left    = '10px'                                                    #
+#                                                                       #
 #-----------------------------------------------------------------------#
 
 if theme == 'mono' || theme == 'dark'
-  labelColor	= 'WHITE'
-  nameColor		= 'WHITE'
-  uptimeColor	= 'WHITE'
-  bkground		= 'rgba(#FFF, 0.1)'
-  opacityLevel	= '1'
+  labelColor    = 'WHITE'
+  nameColor     = 'WHITE'
+  uptimeColor   = 'WHITE'
+  bkground      = 'rgba(#FFF, 0.1)'
+  opacityLevel  = '1'
 
 else if theme == 'paper'
-  labelColor	= 'WHITE'
-  nameColor		= 'BLACK'
-  uptimeColor	= 'BLACK'
-  bkground		= 'rgba(#FFF, 0.1)'
-  opacityLevel	= '0.8'
+  labelColor    = 'WHITE'
+  nameColor     = 'BLACK'
+  uptimeColor   = 'BLACK'
+  bkground      = 'rgba(#FFF, 0.1)'
+  opacityLevel  = '0.8'
 
 else
-  labelColor	= 'WHITE'
-  nameColor		= '#D3D3D3'
-  uptimeColor	= '#7dff7d'
-  bkground		= 'rgba(#000, 0.1)'
-  opacityLevel	= '1'
+  labelColor    = 'WHITE'
+  nameColor     = '#D3D3D3'
+  uptimeColor   = '#7dff7d'
+  bkground      = 'rgba(#000, 0.1)'
+  opacityLevel  = '1'
 
 if theme == 'dark'
-  bkground		= 'rgba(#000, 0.5)'
+  bkground      = 'rgba(#000, 0.5)'
 
 command: "system_profiler SPSoftwareDataType | awk '{ if((/System Version/) && (/OS X/)) { print $3$4, $5, $6 }
-													  else if (/System Version/) { print $3, $4, $5 } }'"
+                                                      else if (/System Version/) { print $3, $4, $5 } }'"
 
 # Update every 24 hrs
 refreshFrequency: 86400000
 
 style: """
-  top:	10px
+  top:  10px
   left: 10px
   font-family: Avenir Next
   color: #{uptimeColor}
@@ -93,7 +93,7 @@ style: """
     padding: 0
     margin: 2px
     margin-left:48px
-    font-size: 10px
+    font-size: 12px
     font-weight: 400
     max-width: 100%
     color: #{nameColor}
@@ -108,11 +108,11 @@ render: -> """
 """
 
 update: (output,domEl) ->
-  values		= output.split(" ")
-  osName 		= values[0]
-  osVersion 	= values[1]
-  osBuild		= values[2]
-  div			= $(domEl)
+  values        = output.split(" ")
+  osName        = values[0]
+  osVersion     = values[1]
+  osBuild       = values[2]
+  div           = $(domEl)
 
   switch
     when osVersion.substr(0,5) == "10.10" then (document.getElementById("osIcon").src = "os_version_pro.widget/icons/yosemite.png") && (osRelease = ' Yosemite')

@@ -11,7 +11,7 @@ command: "./public_ip2.widget/script.sh"
 refreshFrequency: '1m'
 
 style: """
-  left 162px
+  left 335px
   top 10px
 
   color white1
