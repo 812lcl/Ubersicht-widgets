@@ -30,26 +30,24 @@ const showBuild = true;
 /*-----------------------------------------------------------------------*/
 
 // Position the widget on the screen
-const pos1  = 'left: .5rem';
-const pos2  = 'bottom: .5rem';
+const pos1  = 'left: 10px';
+const pos2  = 'top: 10px';
 /*-----------------------------------------------------------------------*/
 
 /* --- Create the themes ------------------------------------------------*/
-let labelColor, nameColor, osColor, lineColor, bkGround, uptimeColor, opacityLevel;
+let labelColor, nameColor, osColor, bkGround, uptimeColor, opacityLevel;
 if (theme === 'mono' || theme === 'dark') {
   labelColor   = '#fff';     // white
   nameColor    = '#fff';     // white
   osColor      = '#fff';     // white
-  lineColor    = '#fff';     // white
   uptimeColor  = '#ddd';     // light gray
   bkGround     = 'rgba(0, 0, 0, 0.5)';
-  opacityLevel = '0.6';
+  opacityLevel = '1';
 }
 else if (theme === 'paper') {
   labelColor   = '#fff';     // white
   nameColor    = '#000';     // black
   osColor      = '#000';     // black
-  lineColor    = '#fff';     // white
   uptimeColor  = '#aaa';     // gray
   bkGround     = 'rgba(255, 255, 255, 1)';
   opacityLevel = '0.8';
@@ -58,14 +56,12 @@ else {
   labelColor   = '#fff';     // white
   nameColor    = '#ffa640';  // orange
   osColor      = '#7dff7d';  // light green
-  lineColor    = '#00BFFF';  // light blue
   uptimeColor  = '#e6273d';  // red
   bkGround     = 'rgba(0, 0, 0, 0.5)';
   opacityLevel = '1';
 }
 if (theme === 'dark') {
   uptimeColor  = '#aaa';     // gray
-  lineColor    = 'rgba(0, 0, 0, 0.6)';
 }
 
 /*=== DO NOT EDIT AFTER THIS LINE unless you know what you're doing! ===
@@ -193,12 +189,12 @@ const Div = styled('div')`
   font-size: 1rem;
   font-weight: 400;
   display: block;
-  border: 1px solid ${lineColor};
-  border-radius: .5rem;
+  border-radius: 5px;
   text-shadow: 0 0 1px ${bkGround};
   background: ${bkGround};
   opacity: ${opacityLevel};
   padding: 4px 8px 4px 6px;
+  height: 42px;
 `;
 
 const Img = styled('img')`
