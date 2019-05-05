@@ -35,8 +35,8 @@ style: """
   td
     font-size: 12px
     font-weight: 100
-    width: 105px
-    max-width: 105px
+    width: 108px
+    max-width: 108px
     overflow: hidden
     text-shadow: 0 0 1px rgba(#000, 0.5)
 

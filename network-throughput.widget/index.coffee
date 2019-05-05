@@ -30,7 +30,7 @@ style: """
     border-radius 5px
 
     .container
-        width: 300px
+        width: 310px
         text-align: widget-align
         position: relative
         clear: both

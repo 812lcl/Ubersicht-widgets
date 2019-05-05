@@ -62,6 +62,8 @@ style: """
     font-weight: 400
     opacity: #{opacityLevel}
     padding: 4px 8px 4px 6px
+    width: 153px
+    height: 42px
 
     &:after
       content: ''

@@ -11,7 +11,7 @@ command: "./public_ip2.widget/script.sh"
 refreshFrequency: '1m'
 
 style: """
-  left 335px
+  left 180px
   top 10px
 
   color white1
@@ -29,10 +29,11 @@ style: """
     display: block
     text-shadow: 0 0 1px rgba(#000, 0.5)
     background: #{bkground}
-    font-size: 21px
+    font-size: 20px
     font-weight: 100
     border-radius 5px
-    width 170px
+    width 160px
+    height 50px
 
   .content
     padding: 1px
