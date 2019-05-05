@@ -2,7 +2,7 @@ import { css } from "uebersicht"
 const yaml = require('./lib/js-yaml.js')
 
 const quote_block = css`
-  background: rgba(0, 0, 0, .5);
+  background: rgba(0, 0, 0, 0);
   padding: 10px 20px;
   border-radius 5px;
 `
@@ -15,16 +15,17 @@ const quote__text = css`
 `
 
 const quote__author = css`
-  text-align: right;
+  text-align: center;
   font-size: 15px;
 `
 
 export const className = `
-  left: 10px;
-  top: 470px;
-  width: 800px;
+  left: 510px;
+  bottom: 110px;
+  width: 400px;
   white-space: pre-line;
   color: #fff;
+  font-weight: 500;
   font-family: Helvetica Neue;
 `
 
