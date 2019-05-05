@@ -11,7 +11,7 @@ command: "./public_ip2.widget/script.sh"
 refreshFrequency: '1m'
 
 style: """
-  left 180px
+  left 178px
   top 10px
 
   color white1
@@ -22,7 +22,7 @@ style: """
   color #fff
   font-family Helvetica Neue
   text-align left
-  padding-left 0px
+  padding-left 2px
 
 
   div
@@ -36,7 +36,7 @@ style: """
     height 50px
 
   .content
-    padding: 1px
+    padding: 2px
     font-size: 10px
     font-weight: 500
     color: #fff
