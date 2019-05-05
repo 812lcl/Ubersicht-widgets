@@ -12,7 +12,7 @@ refreshFrequency: '1m'
 
 style: """
   left 178px
-  top 10px
+  bottom 410px
 
   color white1
   white-space nowrap

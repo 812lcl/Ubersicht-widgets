@@ -31,7 +31,7 @@ const showBuild = true;
 
 // Position the widget on the screen
 const pos1  = 'left: 10px';
-const pos2  = 'top: 10px';
+const pos2  = 'bottom: 410px';
 /*-----------------------------------------------------------------------*/
 
 /* --- Create the themes ------------------------------------------------*/

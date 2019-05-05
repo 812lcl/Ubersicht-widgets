@@ -14,7 +14,8 @@ command: "ps axo \"rss,pid,ucomm\" | sort -nr | head -n3 | awk '{printf \"%8.0f 
 refreshFrequency: 5000
 
 style: """
-  top: 125px
+  // top: 125px
+  bottom: 310px
   left: 10px
   color: #fff
   font-family: Helvetica Neue

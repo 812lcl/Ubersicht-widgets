@@ -14,7 +14,8 @@ command: "ps axro \"%cpu,ucomm,pid\" | awk 'FNR>1' | head -n 3 | sed -e 's/^[ ]*
 refreshFrequency: 2000
 
 style: """
-  top: 75px
+  // top: 75px
+  bottom: 360px
   left: 10px
   color: #fff
   font-family: Helvetica Neue
